@@ -12,7 +12,8 @@
   vertical-align: middle;
   user-select: none;
   border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  min-height: 50px;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, 4px);
   @include transition($btn-transition);
 
   // Share hover and focus styles
@@ -31,6 +32,10 @@
   &:disabled {
     opacity: $btn-disabled-opacity;
     @include box-shadow(none);
+  }
+
+  &.btn-shadow{
+    box-shadow: 0px 8px 15px rgba($primary, 0.3);
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
